@@ -1,0 +1,32 @@
+.container{
+    border:1px solid grey;
+    width: 26%;
+    margin: 10% auto;
+    padding: 20px;
+}
+form{
+    text-align: right;
+}
+label{
+    vertical-align: top;
+}
+select{
+    width: 206px;
+}
+.input{
+    margin: 5px;
+    padding-left: 5px;
+}
+input, textarea{
+    padding: 0;
+    width: 200px;
+}
+/* a{
+    margin: 5px;
+    background: white;
+    border: 1px solid grey;
+    box-shadow: 2px 2px 2px grey;
+    color: black;
+    text-decoration: none;
+    border-radius: 3px;
+} */

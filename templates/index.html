@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p>{{message}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <form action="/process" method="post">
+            <label for="name">Name: </label>
+            <input class="input" type="text" name="name" placeholder="Name">
+            <br>
+            <label for="location">Dojo Location: </label>
+            <select class="input" name="location">
+                <option value="None">Select Location</option>
+                <option value="Silicon Valley">Silicon Valley</option>
+                <option value="Seattle">Seattle</option>
+                <option value="Dallas">Dallas</option>
+            </select>
+            <br>
+            <label for="language">Favorite Language: </label>
+            <select class="input" name="language">
+                <option value="None">Select Language</option>
+                <option value="Java Script">JavaScript</option>
+                <option value="Python">Python</option>
+                <option value="Ruby">Ruby</option>
+            </select>
+            <br>
+            <label for="comments">Comments (optional): </label>
+            <textarea class="input" name="comments" cols="30" rows="10" placeholder="Comments here"></textarea>
+            <br>
+            <button>Button</button>
+        </form>
+    </div>
+</body>
+
+</html>
